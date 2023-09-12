@@ -7,8 +7,8 @@
 * A mascot test file.
 
 
-|   #   | File           | Description            |
-| :---: | -------------- | ---------------------- |
-|   1   | main.go        | main                   |
-|   2   | mascot.go      | mascot module          |
-|   3   | mascot_test.go | test for mascot module |
+|   #   | File                           | Description                            |
+| :---: | ------------------------------ | -------------------------------------- |
+|   1   | main.go[main.go]               | main[main.go]                          |
+|   2   | mascot.go[mascot.go]           | mascot module[mascot.go]               |
+|   3   | mascot_test.go[mascot_test.go] | test for mascot module[mascot_test.go] |
