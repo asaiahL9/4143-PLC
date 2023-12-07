@@ -7,7 +7,7 @@
 * Downloaded images are saved to disk with unique names - end of image url
 * Proper error handling for failed downloads.
 * Time taken by each version to complete the downloads are printed.
-* Largely witter by ChatGPT
+* Largely written by ChatGPT
 * **Sequential Time: 1.6829861s**
 * **Concurrent Time: 168.1735ms**
 
