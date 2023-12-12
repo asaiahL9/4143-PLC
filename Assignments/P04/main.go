@@ -11,20 +11,34 @@ import (
 )
 
 // Sequential version of the image downloader.
+// downloadImagesSequential sequentially downloads images from the provided list of URLs.
 func downloadImagesSequential(urls []string) {
+	// Iterate through each URL in the list.
 	for _, url := range urls {
+		// Generate a filename based on the URL.
 		filename := generateFilename(url)
+
+		// Download the image from the current URL and save it with the generated filename.
 		err := downloadImage(url, filename)
+
+		// Check if there was an error during the download.
 		if err != nil {
+			// Print an error message, including the URL and the specific error.
 			fmt.Printf("Error downloading image from %s: %v\n", url, err)
 		}
 	}
 }
 
+
+// generateFilename generates a unique filename for the given URL based on the current timestamp.
 func generateFilename(url string) string {
+	// Extract the file extension from the URL.
 	fileExt := filepath.Ext(url)
+
+	// Generate a filename using the current Unix timestamp in nanoseconds
 	return fmt.Sprintf("image_%d%s", time.Now().UnixNano(), fileExt)
 }
+
 
 // Concurrent version of the image downloader.
 func downloadImagesConcurrent(urls []string) {
